@@ -1,0 +1,494 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: #121212 url("images/background.jpg") repeat;
+    background-size: 500px;
+    color: #eeeeee;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    font-style: italic;
+}
+
+h2 { font-size: 27px; }
+
+p {
+    color: #c5c5c5;
+    margin-bottom: 15px;
+}
+
+strong, b {
+    font-style: italic;
+}
+
+.eyebrow {
+    color: #aaaaaa;
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 18px 7%;
+    background: #181818;
+    border-bottom: 1px solid #383838;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.logo span { color: #1ed760; }
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color .3s;
+}
+
+.main-nav a:visited { color: #cccccc; }
+.main-nav a:hover, .main-nav a.active { color: white; }
+.main-nav a.active {
+    border-bottom: 2px solid #1ed760;
+    padding-bottom: 5px;
+}
+.main-nav a:active { color: #1ed760; }
+
+/* Homepage */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding: 55px 10%;
+}
+
+.hero-text { flex: 1 1 55%; }
+.hero h1 { font-size: 40px; }
+.hero h1 span { color: #aaaaaa; }
+.hero h2 { font-size: 22px; color: #c5c5c5; }
+
+.profile-image { flex: 0 1 280px; }
+.profile-image img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Page banners */
+.page-banner {
+    padding: 55px 10%;
+    background: #1b1b1b;
+}
+
+.page-banner h1 {
+    font-size: 38px;
+    max-width: 750px;
+}
+
+.page-banner h1 span { color: #aaaaaa; }
+.page-banner p { max-width: 750px; }
+
+.anime-banner { background: #1c1b27; }
+.anime-banner h1 span { color: #aaa0e5; }
+.gaming-banner { background: #19231c; }
+.gaming-banner h1 span { color: #8bcf8c; }
+.setu-banner { background: #192438; }
+.setu-banner h1 span { color: #83aee8; }
+
+/* Main content */
+.content-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 9%;
+}
+
+.content-section p {
+    max-width: 950px;
+    line-height: 1.7;
+}
+
+#about { border-top: 1px solid #333333; }
+
+/* Buttons and links */
+.main-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #eeeeee;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.main-button:hover { background: #bbbbbb; }
+
+.content-section a, .anime-section a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.content-section a:hover, .anime-section a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Images */
+figure { margin: 0; }
+
+figure img {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    color: #aaaaaa;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 7px;
+    font-style: italic;
+}
+
+.wide-figure {
+    max-width: 750px;
+    margin: auto;
+}
+
+.wide-figure img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.profile-image img, .game-card img, .console-card img {
+    transition: transform .3s;
+}
+
+.game-card:hover img, .console-card:hover img {
+    transform: scale(1.02);
+}
+
+/* Cards */
+.interest-grid, .artist-grid, .game-grid, .console-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.interest-card, .artist-card, .game-card, .console-card {
+    flex: 1 1 240px;
+    padding: 20px;
+    margin-bottom: 8px;
+    background: #202020;
+    border: 1px solid #444444;
+    border-radius: 8px;
+}
+
+.interest-card:hover, .artist-card:hover,
+.game-card:hover, .console-card:hover {
+    background: #292929;
+}
+
+.interest-card p, .artist-card p,
+.game-card p, .console-card p {
+    font-size: 15px;
+}
+
+.game-card h3 { color: #9bcf9b; }
+.artist-card h3 { color: #1ed760; }
+.console-card h3 { color: #9bcfdb; }
+
+.game-card img, .console-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+}
+
+/* Quotes and lists */
+.quote-section {
+    padding: 45px 10%;
+    text-align: center;
+    background: #1c1c1c;
+    border-top: 1px solid #383838;
+    border-bottom: 1px solid #383838;
+}
+
+blockquote {
+    max-width: 800px;
+    margin: auto auto 15px;
+    font-size: 21px;
+    font-style: italic;
+    color: white;
+}
+
+.quote-section p {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+ul, ol {
+    padding-left: 25px;
+    margin: 12px 0 20px;
+    color: #c5c5c5;
+}
+
+li { padding: 4px 0; }
+
+/* Page links */
+.page-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.page-links a {
+    padding: 10px 15px;
+    background: #252525;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.page-links a:hover { background: #444444; }
+
+/* Anime page */
+.anime-section {
+    padding: 45px 10%;
+    background: #191923;
+}
+
+.anime-section.alternate { background: #222231; }
+.anime-section h2 { color: #c3b8ed; }
+.anime-section p { max-width: 850px; }
+
+/* Music page */
+.music-page { background: #121212; }
+.music-page .logo span { color: #1ed760; }
+
+.music-hero, .music-feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding: 55px 10%;
+    background: linear-gradient(120deg, #14291d, #121212);
+}
+
+.music-heading { flex: 1 1 65%; }
+.music-heading h1 { font-size: 39px; }
+.music-heading h1 span { color: #1ed760; }
+
+.spotify-logo, .music-image { flex: 0 1 170px; }
+
+.spotify-logo img, .music-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.music-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.music-tags span {
+    padding: 7px 13px;
+    background: #202820;
+    border: 1px solid #275c38;
+    border-radius: 20px;
+    color: #1ed760;
+    font-size: 14px;
+}
+
+.artist-number {
+    color: #1ed760;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.artist-card a { color: #1ed760; }
+
+.spotify-feature {
+    padding: 45px 10%;
+    text-align: center;
+    background: #14251a;
+}
+
+.spotify-feature h2 { color: #1ed760; }
+
+.spotify-button {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #1ed760;
+    color: #111111;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.spotify-button:hover { background: #18b951; }
+
+/* Gaming and SETU */
+.nintendo-section {
+    padding: 50px 10%;
+    background: #20202a;
+}
+
+.nintendo-section h2 { color: #9bcfdb; }
+
+.setu-logo {
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+}
+
+.setu-logo img {
+    width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+.setu-logo figcaption { color: #555555; }
+
+/* Tables */
+.table-container {
+    width: 100%;
+    max-width: 850px;
+    overflow-x: auto;
+    margin: 25px 0;
+    border: 1px solid #454545;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #191919;
+}
+
+th {
+    padding: 16px 20px;
+    background: #303030;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #505050;
+}
+
+td {
+    padding: 15px 20px;
+    border: 1px solid #404040;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+tbody tr:nth-of-type(odd) { background: #242424; }
+tbody tr:nth-of-type(even) { background: #191919; }
+tbody td:first-child {
+    width: 35%;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+tbody tr:hover {
+    background: #343434;
+    transition: background-color .25s ease;
+}
+
+/* Footer */
+.site-footer {
+    padding: 25px;
+    text-align: center;
+    background: #181818;
+    border-top: 1px solid #383838;
+}
+
+.site-footer p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 3px;
+}
+
+/* Mobile */
+@media screen and (max-width: 750px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-nav { gap: 12px; }
+
+    .hero, .music-hero, .music-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero { padding: 40px 7%; }
+    .profile-image { max-width: 250px; }
+    .page-banner { padding: 40px 7%; }
+
+    .page-banner h1, .hero h1, .music-heading h1 {
+        font-size: 30px;
+    }
+
+    .content-section, .anime-section, .nintendo-section {
+        padding: 35px 7%;
+    }
+
+    .interest-card, .artist-card, .game-card, .console-card {
+        flex-basis: 100%;
+    }
+
+    .page-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-links a { text-align: center; }
+    blockquote { font-size: 18px; }
